@@ -1,0 +1,22 @@
+using UnityEngine;
+using System.Collections;
+
+public class countings : MonoBehaviour
+{
+	public string sentence;
+
+	// Use this for initialization
+	void Start ()
+	{
+		string source = (sentence);
+		int count = source.Length - source.Replace("s", "").Length;
+		print ("The number of Ss is " + count);
+
+	}
+	
+	// Update is called once per frame
+	void Update ()
+	{
+		
+	}
+}
