@@ -21,12 +21,12 @@ public class Hello : MonoBehaviour {
 	{
 	
 	}
-	public void SayHello (string name)
+	public void SayHello (string passedName)
 	{
-		print ("Hello, " + name);
-	}
-	public void SayGoodbye ()
-	{
-		print ("Goodbye... ");
-	}
+		print ("Hello, " + passedName);	//Your code gives you the yellow error because it will run, but isn't sure
+	}					//if you meant to print 'name' from Main() or SayHello().
+	public void SayGoodbye ()		//Avoid the issue by using a different variable name in each function. Main() will
+	{					//stick the value of its string into the function it calls. That way other functions
+		print ("Goodbye... ");		//in a complex game can share functions so you don't have to recode them.
+	}					//I changed the variable name inside SayHello to show you.
 }
